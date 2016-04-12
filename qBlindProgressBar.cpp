@@ -40,6 +40,8 @@ QBlindProgressBar::QBlindProgressBar(QWidget *parent)
     QTimer::singleShot(2000, Qt::CoarseTimer, animation1_, SLOT(start()));
     QTimer::singleShot(2500, Qt::CoarseTimer, animation2_, SLOT(start()));
     QTimer::singleShot(3000, Qt::CoarseTimer, animation3_, SLOT(start()));
+    
+    setFocusPolicy(Qt::NoFocus);
 }
 
 void QBlindProgressBar::resizeEvent(QResizeEvent *event)
